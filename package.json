@@ -1,0 +1,43 @@
+{
+  "name": "bitmoon-web3-provider",
+  "version": "1.0.0",
+  "description": "Web3 javascript wrapper provider",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "compile": "browserify ./index.js --s bitmoon-web3-provider -g [ babelify --presets [ es2015 react ] ] -o ./dist/bitmoon-web3-provider.js && uglifyjs ./dist/bitmoon-web3-provider.js -o ./dist/bitmoon-web3-provider.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BitMoonOne/bitmoon-web3-provider.git"
+  },
+  "keywords": [
+    "Web3",
+    "Ethereum",
+    "Bitmoon"
+  ],
+  "author": "jackliu8722",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BitMoonOne/bitmoon-web3-provider/issues"
+  },
+  "homepage": "https://github.com/BitMoonOne/bitmoon-web3-provider#readme",
+  "dependencies": {
+    "node-fetch": "^2.2.0",
+    "web3": "^0.20.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
+    "chai": "^4.1.2",
+    "eslint": "^5.5.0",
+    "browserify": "^16.2.2",
+    "loglevel": "^1.6.1",
+    "uglify-js": "^3.4.8"
+  }
+}
